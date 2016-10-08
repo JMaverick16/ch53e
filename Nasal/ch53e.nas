@@ -1031,9 +1031,9 @@ var torque_val = 0;
 
 var update_torque_sound_filtered = func(dt) {
 	var t = torque.getValue();
-	t = clamp(t * 0.000001);
+	t = clamp(t * 0.000001,0,1);
 	t = t*0.25 + 0.75;
-	var r = clamp(rotor_rpm.getValue()*0.02-1);
+	var r = clamp(rotor_rpm.getValue()*0.02-1,0,1);
 	torque_sound_filtered.setDoubleValue(t*r);
 }
 
@@ -1070,8 +1070,8 @@ var Skid = {
 		me.pitchN.setDoubleValue(rollspeed * 0.6);
 
 		var s = normatan(20 * rollspeed);
-		var f = clamp((me.frictionN.getValue() - 0.5) * 2);
-		var c = clamp(me.compressionN.getValue() * 2);
+		var f = clamp((me.frictionN.getValue() - 0.5) * 2,0,1);
+		var c = clamp(me.compressionN.getValue() * 2,0,1);
 		me.volumeN.setDoubleValue(s * f * c * 2);
 		#if (!me.self) {
 		#	cprint("33;1", sprintf("S=%0.3f  F=%0.3f  C=%0.3f  >>  %0.3f", s, f, c, s * f * c));
