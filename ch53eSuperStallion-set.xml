@@ -138,10 +138,10 @@
                     <stick-pos-bright-norm type='double' userarchive='y'/>
                     <caution-bright-norm type='double' userarchive='y'/>
                     <probe-extend type='int' userarchive='y'>0</probe-extend>
-                    <fuel-button n="0" type="bool">false</fuel-button>
-                    <fuel-button n="1" type="bool">false</fuel-button>
-                    <fuel-button n="2" type="bool">false</fuel-button>
-                    <fuel-button n="3" type="bool">false</fuel-button>
+                    <fuel-button n="0" type="bool">true</fuel-button>
+                    <fuel-button n="1" type="bool">true</fuel-button>
+                    <fuel-button n="2" type="bool">true</fuel-button>
+                    <fuel-button n="3" type="bool">true</fuel-button>
                     <refuel-pwr type="bool">false</refuel-pwr>
                     <refuel-probe type="bool">false</refuel-probe>
                     <refuel-purge type="bool">false</refuel-purge>
