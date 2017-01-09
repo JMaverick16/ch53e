@@ -2,6 +2,21 @@
 
 <PropertyList>
 
+      <key n="101">
+        <name>e</name>
+        <desc>Fire MG</desc>
+        <binding>
+            <command>property-toggle</command>
+            <property>controls/armament/trigger</property>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>property-toggle</command>
+            <property>controls/armament/gun-trigger</property>
+          </binding>
+        </mod-up>
+      </key>
+
    <key n="12">
     <name>CTRL-l</name>
     <desc>Loading Bay Door</desc>

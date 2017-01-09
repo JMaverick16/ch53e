@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <cannon>
+    <model>Aircraft/ch53e/Models/Effects/guns/tracer.xml</model>
+    <trigger>controls/armament/gun-trigger</trigger>
+    <speed>2750</speed>
+    <cd>0.193</cd>
+    <eda>0.00338158219</eda>
+    <fuse-range>0</fuse-range>
+    <weight>0.286600941</weight>
+    <life>40</life>
+    <repeat>true</repeat>
+    <delay>0.45</delay>
+    <count>-1</count>
+    <wind>false</wind>
+    <expiry>true</expiry>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/ch53e/Models/Effects/guns/bullet-submodel.xml</submodel-path>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>0.1</pitch-offset>
+  </cannon>
+
+  <submodel>
+    <name>50BMG</name>
+    <model alias="../../cannon/model"/>
+    <trigger alias="../../cannon/trigger"/>
+    <speed alias="../../cannon/speed"/>
+    <cd alias="../../cannon/cd"/>
+    <eda alias="../../cannon/eda"/>
+    <fuse-range alias="../../cannon/fuse-range"/>
+    <weight alias="../../cannon/weight"/>
+    <life alias="../../cannon/life"/>
+    <repeat alias="../../cannon/repeat"/>
+    <delay alias="../../cannon/delay"/>
+    <count alias="../../cannon/count"/>
+    <wind alias="../../cannon/wind"/>
+    <expiry alias="../../cannon/expiry"/>
+    <collision alias="../../cannon/collision"/>
+    <collision-report alias="../../cannon/collision-report"/>
+    <impact alias="../../cannon/impact"/>
+    <impact-report alias="../../cannon/impact-report"/>
+    <submodel-path alias="../../cannon/submodel-path"/>
+    <yaw-offset  alias="../../cannon/yaw-offset"/>
+    <pitch-offset alias="../../cannon/pitch-offset"/>
+    <x-offset> -32.523 </x-offset> <!-- -4.82754 m = 15.839 ft -->
+    <y-offset> 3.125 </y-offset> <!-- -0.10555 m =  0.346 ft -->
+    <z-offset> -0.156 </z-offset> <!-- -0.12425 m = -0.407 ft -->
+  </submodel>
+
+
+</PropertyList>
