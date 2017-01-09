@@ -12,7 +12,7 @@
         <mod-up>
           <binding>
             <command>property-toggle</command>
-            <property>controls/armament/gun-trigger</property>
+            <property>controls/armament/trigger</property>
           </binding>
         </mod-up>
       </key>

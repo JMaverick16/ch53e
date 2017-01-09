@@ -13,6 +13,13 @@
           <script>aircraft.livery.dialog.toggle()</script>
         </binding>
       </item>
+      <item>
+        <label>Reload 50 cal</label>
+        <binding>
+          <command>nasal</command>
+          <script>ch53e.reload_ammo()</script>
+        </binding>
+      </item>
     </menu>
   </default>
 
