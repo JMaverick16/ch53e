@@ -28,6 +28,10 @@ var fire_gun = func(){
 
 setlistener("/controls/armament/trigger", fire_gun);
 
+var reload_ammo = func(){
+	setprop("controls/armament/ammo",2800);
+}
+
 var hit_count = 0;
 var hit_callsign = "";
 var hit_timer = 0;
