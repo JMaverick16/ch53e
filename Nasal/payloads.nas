@@ -9,9 +9,7 @@ input = {
       input[name] = props.globals.getNode(input[name], 1);
   }
 
-
-
-setlistener("/controls/armament/trigger", func{
+var fire_gun = func(){
 	if(getprop("controls/armament/trigger")){
 		var scnd = getprop("sim/time/delta-sec");
 		var rounds=getprop("controls/armament/ammo");
@@ -22,10 +20,13 @@ setlistener("/controls/armament/trigger", func{
 			if(rounds<0)rounds=0;
 		}
 		setprop("controls/armament/ammo",rounds);
+		settimer(fire_gun,0.1);
 	} else {
 		setprop("controls/armament/gun-trigger",0);
 	}
-});
+};
+
+setlistener("/controls/armament/trigger", fire_gun);
 
 var hit_count = 0;
 var hit_callsign = "";
