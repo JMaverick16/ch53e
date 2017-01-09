@@ -778,7 +778,24 @@
             <max-dist>500</max-dist>
         </crash>
 
-        <gun>
+    <guns>
+        <name>guns</name>
+        <mode>looped</mode>
+        <path>Aircraft/ch53e/Sounds/50cal.wav</path>
+        <property>controls/armament/gun-trigger</property>
+        <volume>
+            <property>controls/armament/gun-trigger</property>
+        </volume>
+        <position>
+            <x>0</x>
+            <y>0</y>
+            <z>-1</z>
+        </position>
+        <reference-dist>10</reference-dist>
+        <max-dist>500.0</max-dist>
+    </guns>
+
+ <!--       <gun>
             <name>GE M134 right</name>
             <mode>looped</mode>
             <path>Aircraft/ch53e/Sounds/GE-M134.wav</path>
@@ -795,9 +812,9 @@
             </position>
             <reference-dist>100</reference-dist>
             <max-dist>500</max-dist>
-        </gun>
+        </gun> -->
 
-        <gun>
+<!--        <gun>
             <name>GE M134 left</name>
             <mode>looped</mode>
             <path>Aircraft/ch53e/Sounds/GE-M134.wav</path>
@@ -814,7 +831,7 @@
             </position>
             <reference-dist>100</reference-dist>
             <max-dist>500</max-dist>
-        </gun>
+        </gun> -->
 
         <!--<HOT>
             <name>HOT_OR</name>

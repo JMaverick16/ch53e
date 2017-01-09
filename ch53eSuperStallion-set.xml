@@ -41,6 +41,11 @@
             <path>Aircraft/ch53e/Sounds/ch53e-sound.xml</path>
         </sound>
 
+       <submodels> 
+      	<serviceable type="bool">true</serviceable>
+      		<path>Aircraft/ch53e/Models/Effects/guns/submodels.xml</path>
+       </submodels>
+
 
         <model>
 
@@ -319,7 +324,10 @@
             <hover-light type='int'>1</hover-light>
 
         </lighting>
-
+        <armament>
+            <guns type="bool">0</guns>
+            <ammo type="double">3000</ammo><!--350 rounds per gun-->
+        </armament>
 
     </controls>
 
@@ -426,7 +434,7 @@
     </surface-positions>
 
     <input>
-        <keyboard include="Nasal/ch53e-keyboard.xml"/>
+      <keyboard include="Nasal/ch53e-keyboard.xml"/>
     </input>
 
     <rotors>
@@ -445,7 +453,7 @@
             <file>Aircraft/ch53e/Nasal/doors.nas</file>
             <file>Aircraft/ch53e/Nasal/ch53e.nas</file>
             <file>Aircraft/ch53e/Nasal/liveries.nas</file>
-           
+            <file>Aircraft/ch53e/Nasal/payloads.nas</file>          
             <file>Aircraft/ch53e/Nasal/jrb-usn.nas</file>
             <file>Aircraft/ch53e/Nasal/interior-lights.nas</file>
             <file>Aircraft/ch53e/Nasal/ch53e-caution.nas</file>
