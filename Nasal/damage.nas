@@ -11,6 +11,21 @@ var clamp = func(v, min, max) { v < min ? min : v > max ? max : v }
 var TRUE  = 1;
 var FALSE = 0;
 
+var cannon_types = {
+    " M70 rocket hit":        40.00, #Viggen rocket
+    " M55 cannon shell hit":  3.50, #Viggen gun
+    " KCA cannon shell hit":  7.00, #Viggen gunpod
+    " Gun Splash On ":        3.0, #Mirage
+    " M61A1 shell hit":       2.50, #f-14/15
+    " GAU-8/A hit":           10.00, #a-10
+    " BK27 cannon hit":       3.50, #typhoon
+    " GSh-30 hit":            3.00, #mig-21
+    " 7.62 hit":              2.50, #UH-1
+    " 50 BMG hit":            3.00, #p-47
+};
+    
+    
+    
 var warhead_lbs = {
     "aim-120":              44.00,
     "AIM120":               44.00,
@@ -18,6 +33,7 @@ var warhead_lbs = {
     "aim-7":                88.00,
     "RB-71":                88.00,
     "aim-9":                20.80,
+    "AIM9":                 20.80,
     "AIM-9":                20.80,
     "RB-24":                20.80,
     "RB-24J":               20.80,
@@ -44,6 +60,14 @@ var warhead_lbs = {
     "LAU-68":               10.00,
     "M317":                145.00,
     "GBU-31":              945.00,
+    "AIM132":               22.05,
+    "ALARM":               450.00,
+    "STORMSHADOW":         850.00,
+    "R-60":                  6.60,
+    "R-27R1":               85.98,
+    "R-27T1":               85.98,
+	  "FAB-500":		           564.00,
+	  "M71R":                200.00,
 };
 
 
