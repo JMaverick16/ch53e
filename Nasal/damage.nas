@@ -188,17 +188,16 @@ var incoming_listener = func {
               nearby_explosion();
             }
           } 
-        } elsif (last_vector[1] == " M70 rocket hit" or last_vector[1] == " KCA cannon shell hit" or last_vector[1] == " Gun Splash On " or last_vector[1] == " M61A1 shell hit" or last_vector[1] == " GAU-8/A hit") {
+        } elsif (cannon_types[last_vector[1]] != nil) {
           # cannon hitting someone
           #print("cannon");
           if (size(last_vector) > 2 and last_vector[2] == " "~callsign) {
             # that someone is me!
             #print("hitting me");
 
-            var probability = 0.20; # take 20% damage from each hit
-            if (last_vector[1] == " M70 rocket hit" or last_vector[1] == " Gun Splash On " or last_vector[1] == " GAU-8/A hit") {
-              probability = 0.30;
-            }
+            var probability = cannon_types[last_vector[1]];
+            #print("probability: " ~ probability);
+            
             var failed = fail_systems(probability);
             printf("Took %.1f%% damage from cannon! %s systems was hit.", probability*100, failed);
             nearby_explosion();
