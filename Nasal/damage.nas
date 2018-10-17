@@ -319,6 +319,23 @@ var fail_systems = func (probability) {
             failed += 1;
         }
     }
+    #no for loop needed as we are only checking if engines are going to fail.
+  #if we needed more custom stuff, we could do a for loop here.
+  #for(var i = 0;i < 1; i = i + 1) { #
+  if (rand() < probability) {
+    #setprop("controls/engines/engine["~i~"]/faults/serviceable",0);
+    #per ch53e.nas lines 973 and 974, setting "state" and "rotor" to 0 will kill the engine
+    #the rotors keep spinning at a slow speed, but the engines fail. rpms decrease over about ~15 seconds to negligable.
+    setprop("sim/model/ch53e/state",0);
+    setprop("controls/engines/engine/magnetos", 0);
+    #set a listener so that if a restart is attempted, it'll fail.
+    setlistener("sim/model/ch53e/state",func { 
+            setprop("sim/model/ch53e/state",0);
+            setprop("controls/engines/engine/magnetos", 0); 
+            });
+    failed += 1;
+  }
+    # }
     return failed;
 };
 
