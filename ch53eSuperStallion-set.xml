@@ -206,6 +206,7 @@
       <!-- Crashed -->
       <int n="7" alias="/sim/crashed" />
 	  
+       <float n="0" alias="/position/altitude-agl-ft"/>                             <!-- SAR operations -->
 	   <float n="5" alias="/instrumentation/doors/passenger/position-norm"/>
 	   <float n="6" alias="/instrumentation/doors/crew/position-norm"/>
 	   <float n="7" alias="/instrumentation/doors/ramp/position-norm"/>
@@ -460,7 +461,10 @@
             <file>Aircraft/ch53e/Nasal/EngSim.nas</file>
             <file>Aircraft/ch53e/Nasal/damage.nas</file>
         </ch53e>
-		
+
+		<sar_service>
+            <file>Aircraft/ch53e/Nasal/sar.nas</file>
+        </sar_service>
 			
 		<lights>
       <file>Aircraft/ch53e/Nasal/Lights.nas</file>
